@@ -1,0 +1,17 @@
+@startuml
+actor LLM
+
+LLM -> ToolCallParser : tool_call (JSON)
+ToolCallParser -> InputValidator : parsed_call
+InputValidator -> PolicyEngine : validate()
+
+PolicyEngine -> ExecutionStateMachine : allow()
+ExecutionStateMachine -> ToolExecutor : execute()
+
+ToolExecutor -> Sandbox : run()
+Sandbox --> ToolExecutor : result
+
+ToolExecutor --> ExecutionStateMachine : execution_result
+ExecutionStateMachine -> AuditLogger : log()
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+skinparam componentStyle rectangle
+
+package "LLM Interface" {
+  [Tool Call Schema]
+  [Tool Call Parser]
+}
+
+package "Guardrails" {
+  [Input Validator]
+  [Policy Engine]
+}
+
+package "Execution Core" {
+  [Tool Executor]
+  [Sandbox]
+}
+
+package "State & Observability" {
+  [Execution State Machine]
+  [Audit Logger]
+}
+
+[Tool Call Schema] --> [Tool Call Parser]
+[Tool Call Parser] --> [Input Validator]
+[Input Validator] --> [Policy Engine]
+
+[Policy Engine] --> [Execution State Machine]
+
+[Execution State Machine] --> [Tool Executor] : allowed
+[Tool Executor] --> [Sandbox]
+
+[Tool Executor] --> [Execution State Machine] : result
+[Execution State Machine] --> [Audit Logger]
+
+@enduml

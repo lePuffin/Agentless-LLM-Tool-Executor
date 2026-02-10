@@ -1,0 +1,23 @@
+@startuml
+[*] --> Idle
+
+Idle --> Received : tool_call_received
+
+Received --> Validating
+Validating --> Rejected : invalid_input
+Validating --> Allowed : valid_input
+
+Allowed --> Executing
+Executing --> Success : execution_ok
+Executing --> Failed : execution_error
+
+Failed --> Retrying : retry_allowed
+Retrying --> Executing
+
+Failed --> Aborted : retry_exceeded
+Rejected --> Aborted
+
+Success --> [*]
+Aborted --> [*]
+
+@enduml

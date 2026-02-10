@@ -8,8 +8,14 @@
 
 /****** Includes ******/
 #include <iostream>
+#include "execution/tool_executor.hpp"
+#include "llm/tool_call_parser.hpp"
+#include "log/audit_logger.hpp"
+#include "state/state_machine.hpp"
+#include "validation/input_validator.hpp"
 
 /****** Defines ******/
+using namespace thecpuffin;
 static constexpr const char* TAG = "[Main]";
 
 /****** Functions ******/
@@ -19,24 +25,26 @@ int main() {
     // Initialization phase: Print a message and create the TaskManager.
     std::cout << "Initializing application..." << std::endl;
 
-    // Main execution phase: Run the task(s) and handle any errors.
-    try {
-        std::cout << TAG << " Application is running..." << std::endl;
+    ToolSchemaStruct schema{{"echo", "ls"}};
+    ToolCallParser   parser;
+    InputValidator   validator;
+    Sandbox          sandbox;
+    ToolExecutor     executor(sandbox);
+    StateMachine     sm;
+    AuditLogger      logger;
 
-        while (1) {
-            // Usual application logic would go here (e.g., event loop, more tasks, etc.)
-            break;  // For this example, we just break immediately
-        }
+    auto call = parser.Parse("echo:msg=hello");
+    sm.OnToolReceived();
 
-    } catch (const std::exception& e) {
-        // Handle known exceptions and print the error message.
-        std::cerr << TAG << " An error occurred: " << e.what() << std::endl;
-        return EXIT_FAILURE;
+    auto v = validator.Validate(call, schema);
+    sm.OnValidation(v);
 
-    } catch (...) {
-        // Handle any other unknown exceptions.
-        std::cerr << TAG << " An unknown error occurred." << std::endl;
-        return EXIT_FAILURE;
+    if (sm.CanExecute()) {
+        auto r = executor.Execute(call);
+        sm.OnExecution(r);
+        logger.Log("Execution finished");
+    } else {
+        logger.Log("Execution aborted due to validation failure");
     }
 
     // Cleanup phase: Print a message before exiting.
