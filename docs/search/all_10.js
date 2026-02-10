@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['tag_0',['TAG',['../src_2main_8cpp.html#ae7d9c64644585526560e9e6824fd84dc',1,'main.cpp']]],
+  ['test_1',['TEST',['../executor__tests_8cpp.html#a28aad0a012aa913e3eec860855877402',1,'TEST(ExecutorGroup, SuccessfulExecutionReturnsSuccess):&#160;executor_tests.cpp'],['../executor__tests_8cpp.html#afb2f3639312e67bbcddddd2489f3c994',1,'TEST(ExecutorGroup, FailingToolReturnsFailure):&#160;executor_tests.cpp'],['../state__machine__tests_8cpp.html#a8b59f76344fb1d2b857153e7cbe783c4',1,'TEST(StateMachineGroup, StartsInIdleState):&#160;state_machine_tests.cpp'],['../state__machine__tests_8cpp.html#a15945d4d4c2b2a4bce838e9daf314a63',1,'TEST(StateMachineGroup, MovesToReceivedWhenToolIsReceived):&#160;state_machine_tests.cpp'],['../state__machine__tests_8cpp.html#a0f129131ba958d9e89ff568786a72b4d',1,'TEST(StateMachineGroup, AllowedValidationMovesToAllowedState):&#160;state_machine_tests.cpp'],['../state__machine__tests_8cpp.html#a237cc63323cdb3c85ff25211bdd297c3',1,'TEST(StateMachineGroup, RejectedValidationMovesToAbortedState):&#160;state_machine_tests.cpp'],['../state__machine__tests_8cpp.html#a0b59c6b3ca3d932b7532253275a6f8f8',1,'TEST(StateMachineGroup, CanExecuteOnlyWhenAllowed):&#160;state_machine_tests.cpp'],['../state__machine__tests_8cpp.html#a402b179bfba7ea1686f5a2dee78d874a',1,'TEST(StateMachineGroup, CannotExecuteWhenAborted):&#160;state_machine_tests.cpp'],['../state__machine__tests_8cpp.html#ae5371d9b334aee352e0bacd9c238ad42',1,'TEST(StateMachineGroup, SuccessfulExecutionMovesToSuccess):&#160;state_machine_tests.cpp'],['../state__machine__tests_8cpp.html#a9f87795f27ea416b16acd281bf615e71',1,'TEST(StateMachineGroup, FailedExecutionMovesToFailed):&#160;state_machine_tests.cpp'],['../validation__tests_8cpp.html#ad4cbd3b4666d9671a272574405a59cda',1,'TEST(ValidationGroup, AllowsToolThatIsInSchema):&#160;validation_tests.cpp'],['../validation__tests_8cpp.html#a4e895e4844822939963982500ccc4c5e',1,'TEST(ValidationGroup, RejectsToolThatIsNotInSchema):&#160;validation_tests.cpp'],['../validation__tests_8cpp.html#a445791c91a9951ad2452e14a6ec26ddf',1,'TEST(ValidationGroup, RejectsEmptyToolName):&#160;validation_tests.cpp']]],
+  ['test_5fgroup_2',['TEST_GROUP',['../executor__tests_8cpp.html#ae9d92940bdc773f2909c906922c58024',1,'TEST_GROUP(ExecutorGroup):&#160;executor_tests.cpp'],['../state__machine__tests_8cpp.html#a8d57f0bbc9b044a25cde70adca6f1f7a',1,'TEST_GROUP(StateMachineGroup):&#160;state_machine_tests.cpp'],['../validation__tests_8cpp.html#a24af71eb7b64ec7aaa4899e0ad323d50',1,'TEST_GROUP(ValidationGroup):&#160;validation_tests.cpp']]],
+  ['thecpuffin_3',['thecpuffin',['../namespacethecpuffin.html',1,'']]],
+  ['this_20project_4',['How to extend this project',['../md__r_e_a_d_m_e.html#autotoc_md18',1,'']]],
+  ['this_20repository_20demonstrates_5',['What this repository demonstrates',['../md__r_e_a_d_m_e.html#autotoc_md14',1,'']]],
+  ['this_20repository_20exists_6',['Why this repository exists',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['this_20repository_20is_20not_7',['What this repository is NOT',['../md__r_e_a_d_m_e.html#autotoc_md16',1,'']]],
+  ['to_20extend_20this_20project_8',['How to extend this project',['../md__r_e_a_d_m_e.html#autotoc_md18',1,'']]],
+  ['tool_20execution_9',['Agentless LLM Tool Execution',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['tool_5fcall_2ehpp_10',['tool_call.hpp',['../tool__call_8hpp.html',1,'']]],
+  ['tool_5fcall_5fparser_2ecpp_11',['tool_call_parser.cpp',['../tool__call__parser_8cpp.html',1,'']]],
+  ['tool_5fcall_5fparser_2ehpp_12',['tool_call_parser.hpp',['../tool__call__parser_8hpp.html',1,'']]],
+  ['tool_5fexecutor_2ecpp_13',['tool_executor.cpp',['../tool__executor_8cpp.html',1,'']]],
+  ['tool_5fexecutor_2ehpp_14',['tool_executor.hpp',['../tool__executor_8hpp.html',1,'']]],
+  ['tool_5fname_15',['tool_name',['../structthecpuffin_1_1_tool_call_struct.html#a0c8c022345cd9f741f962554e6cdc408',1,'thecpuffin::ToolCallStruct']]],
+  ['tool_5fschema_2ehpp_16',['tool_schema.hpp',['../tool__schema_8hpp.html',1,'']]],
+  ['toolcall_17',['ToolCall',['../classthecpuffin_1_1_tool_call.html',1,'thecpuffin::ToolCall'],['../classthecpuffin_1_1_tool_call.html#a06e26d525b7a58f43a5bbf2ee0694360',1,'thecpuffin::ToolCall::ToolCall()']]],
+  ['toolcallparser_18',['ToolCallParser',['../classthecpuffin_1_1_tool_call_parser.html',1,'thecpuffin::ToolCallParser'],['../classthecpuffin_1_1_tool_call_parser.html#ac9fc8d869d24b5dc99d8524bf3b03158',1,'thecpuffin::ToolCallParser::ToolCallParser()']]],
+  ['toolcallstruct_19',['ToolCallStruct',['../structthecpuffin_1_1_tool_call_struct.html',1,'thecpuffin']]],
+  ['toolexecutor_20',['ToolExecutor',['../classthecpuffin_1_1_tool_executor.html',1,'thecpuffin::ToolExecutor'],['../classthecpuffin_1_1_tool_executor.html#a147adb4ca3ace1d5561884bbe28c1abf',1,'thecpuffin::ToolExecutor::ToolExecutor()']]],
+  ['toolschema_21',['ToolSchema',['../classthecpuffin_1_1_tool_schema.html',1,'thecpuffin::ToolSchema'],['../classthecpuffin_1_1_tool_schema.html#a58c902442b6e867baf98b14264d80d77',1,'thecpuffin::ToolSchema::ToolSchema()']]],
+  ['toolschemastruct_22',['ToolSchemaStruct',['../structthecpuffin_1_1_tool_schema_struct.html',1,'thecpuffin']]]
+];
