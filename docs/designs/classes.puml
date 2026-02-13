@@ -1,0 +1,38 @@
+@startuml
+title Repo 3 - Core Classes
+
+class ToolCall {
+    +std::string tool_name
+    +std::map<std::string, std::string> arguments
+}
+
+class ToolSchema {
+    +Validate(call)
+}
+
+class Validator {
+    +Validate(call)
+}
+
+class Executor {
+    +Execute(call)
+}
+
+class ToolRegistry {
+    +Resolve(name)
+}
+
+class StateMachine {
+    +Submit(call)
+    -Validator validator_
+    -Executor executor_
+}
+
+StateMachine --> Validator
+StateMachine --> Executor
+Validator --> ToolSchema
+Executor --> ToolRegistry
+Validator --> ToolCall
+Executor --> ToolCall
+
+@enduml

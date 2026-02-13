@@ -152,7 +152,7 @@ Some natural next steps:
 
 ## Build
 
-This project assumes **C++17**.
+This project assumes **C++20**.
 
 ```bash
 mkdir build
@@ -164,10 +164,4 @@ make
 ---
 ## License
 
-MIT License — use it freely for learning, demos, or commercial projects.
-
----
-## Author
-
-Built as part of a personal exploration into modern AI system architecture
-from a C++ and systems programming perspective.
+This project is licensed under the MIT License. See the LICENSE file for details.
